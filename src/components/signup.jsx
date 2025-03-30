@@ -17,7 +17,7 @@ export default function SignupPage() {
       return;
     }
 
-    const url = `${process.env.REACT_APP_BACKEND_URL}/signup`;
+    const url = "https://campustradeproduction.up.railway.app/signup";
     const data = { email, password };
 
     try {

@@ -6,7 +6,7 @@ useEffect(()=>{
 const vas=async()=>{
 try{
     const response = await axios.post(
-      `${process.env.REACT_APP_BACKEND_URL}/check-refresh-token`,
+      "https://campustradeproduction.up.railway.app/check-refresh-token",
       {},
       { withCredentials: true }
     );

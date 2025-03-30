@@ -26,7 +26,7 @@ export default function LoginPage() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/login`,
+        "https://campustradeproduction.up.railway.app/login",
         { email, password },
         { withCredentials: true }
       );

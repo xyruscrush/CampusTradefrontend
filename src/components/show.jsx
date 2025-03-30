@@ -8,7 +8,7 @@ function Show() {
 
   useEffect(() => {
     axios
-      .post(`${process.env.REACT_APP_BACKEND_URL}/item/${id}`)
+      .post(`https://campustradeproduction.up.railway.app/item/${id}`)
       .then((response) => {
         setItem(response.data.response);
       })

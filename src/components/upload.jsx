@@ -15,7 +15,7 @@ export default function Upload() {
   const remove = async (id) => {
     try {
       const response = await axios.delete(
-        `${process.env.REACT_APP_BACKEND_URL}/delete`,
+        "https://campustradeproduction.up.railway.app/delete",
         {
           data: { id: id },
         }

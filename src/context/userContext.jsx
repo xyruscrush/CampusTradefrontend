@@ -15,7 +15,7 @@ export const UserProvider = ({ children }) => {
       try {
         if (accessToken) {
           const response = await axios.post(
-            `${process.env.REACT_APP_BACKEND_URL}/get-items-secure`,
+            "https://campustradeproduction.up.railway.app/get-items-secure",
             {},
             {
               headers: { Authorization: `Bearer ${accessToken}` },
@@ -26,14 +26,14 @@ export const UserProvider = ({ children }) => {
         } else {
           
          const response2 = await axios.post(
-           `${process.env.REACT_APP_BACKEND_URL}/check-refresh-token`,
+           "https://campustradeproduction.up.railway.app/check-refresh-token",
            {},
            { withCredentials: true }
          );
          if(response2.data.exists){
           
           const response = await axios.post(
-            `${process.env.REACT_APP_BACKEND_URL}/refresh`,
+            "https://campustradeproduction.up.railway.app/refresh",
             {},
             {
               withCredentials: true,
@@ -44,7 +44,7 @@ export const UserProvider = ({ children }) => {
             setAccessToken(response.data.accessToken);
 
             const response1 = await axios.post(
-              `${process.env.REACT_APP_BACKEND_URL}/get-items-secure`,
+              "https://campustradeproduction.up.railway.app/get-items-secure",
               {},
               {
                 headers: {

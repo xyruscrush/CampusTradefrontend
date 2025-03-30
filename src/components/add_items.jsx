@@ -48,7 +48,7 @@ export default function AddItem() {
 
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/upload`,
+        "https://campustradeproduction.up.railway.app/upload",
         formDataToSend,
         {
           headers: { "Content-Type": "multipart/form-data" },

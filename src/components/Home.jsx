@@ -19,7 +19,7 @@ function Home() {
   const handleLogout = async () => {
     try {
       await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/logout`,
+        "https://campustradeproduction.up.railway.app/logout",
         {},
         { withCredentials: true }
       );
@@ -34,7 +34,7 @@ function Home() {
     if (editType === "email") {
       try {
         const response = await axios.post(
-          `${process.env.REACT_APP_BACKEND_URL}/update-email`,
+          "https://campustradeproduction.up.railway.app/update-email",
           { email: email },
           {
             headers: { Authorization: `Bearer ${accessToken}` },
@@ -52,7 +52,7 @@ function Home() {
     } else {
       try {
         const response = await axios.post(
-          `${process.env.REACT_APP_BACKEND_URL}/update-password`,
+          "https://campustradeproduction.up.railway.app/update-password",
           { password: password },
           {
             headers: { Authorization: `Bearer ${accessToken}` },
