@@ -12,7 +12,7 @@ export default function LoginPage() {
   useEffect(() => {
     const logout = async () => {
       await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/logout`,
+        "https://campustradeproduction.up.railway.app/logout",
         {},
         {
           withCredentials: true,
