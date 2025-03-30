@@ -15,7 +15,7 @@ export const UserProvider = ({ children }) => {
       try {
         if (accessToken) {
           const response = await axios.post(
-            "https://campustradeproduction.up.railway.app/get-items-secure",
+            "https://campustradeproduction.up.railway.app/get_items_secure",
             {},
             {
               headers: { Authorization: `Bearer ${accessToken}` },
