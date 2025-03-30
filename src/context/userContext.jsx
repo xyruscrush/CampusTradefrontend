@@ -44,7 +44,7 @@ export const UserProvider = ({ children }) => {
             setAccessToken(response.data.accessToken);
 
             const response1 = await axios.post(
-              "https://campustradeproduction.up.railway.app/get-items-secure",
+              "https://campustradeproduction.up.railway.app/get_items_secure",
               {},
               {
                 headers: {
